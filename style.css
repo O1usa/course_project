@@ -153,55 +153,63 @@ body {
     transform: rotateY(180deg);
 }
 
-/* PROJECT CARDS — КРАСИВО */
-.project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.project-card {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.card-title {
-    font-size: 1.1em;
-    font-weight: 700;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #e5e7eb;
-}
-
-/* АКЦЕНТЫ */
-.project-card.goal .card-title {
-    color: #2563eb;
-}
-
-.project-card.needs .card-title {
-    color: #dc2626;
-}
-
-.project-card.solution .card-title {
-    color: #16a34a;
-}
-
-.project-card.success .card-title {
-    color: #7c3aed;
-}
-
 /* FOOTER */
 footer {
     text-align: center;
     padding: 30px;
     background: #111;
     color: #fff;
+}
+
+/* PROJECT */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px; /* ВАЖНО: большое расстояние */
+}
+
+.project-item {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    overflow: hidden; /* чтобы шапка была ровной */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ШАПКА */
+.project-header {
+    padding: 18px 22px;
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ТЕЛО */
+.project-body {
+    padding: 22px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #1f2937;
+}
+
+/* ЦВЕТА */
+.project-header.goal {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.project-header.needs {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+.project-header.solution {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.project-header.success {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
 }
