@@ -153,6 +153,51 @@ body {
     transform: rotateY(180deg);
 }
 
+/* PROJECT CARDS — КРАСИВО */
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.card-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+/* АКЦЕНТЫ */
+.project-card.goal .card-title {
+    color: #2563eb;
+}
+
+.project-card.needs .card-title {
+    color: #dc2626;
+}
+
+.project-card.solution .card-title {
+    color: #16a34a;
+}
+
+.project-card.success .card-title {
+    color: #7c3aed;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
